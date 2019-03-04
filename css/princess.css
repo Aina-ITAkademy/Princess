@@ -1,0 +1,109 @@
+
+
+/*//////////////////
+// HEADER + INTRO // 
+//////////////////*/
+
+/* Header et son contenu */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width:100vw;
+    color: white; /* Faire passer plus tard en gris avec JS*/
+}
+#BurgerMenu {
+    cursor: pointer;
+    margin-right: 15px;
+}
+#BurgerMenu div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px;
+}
+
+#TitlePrincess {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Image et text intro  */
+#SectionIntro {
+    background-color: gray;
+    background-blend-mode: luminosity;
+    
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center;  */
+    /* background: linear-gradient(#e66465, #9198e5); */
+    background-size: cover;
+    color:white;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+#TextIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+/*////////////
+// AboutMe  // 
+////////////*/
+
+#AboutMeImg{
+    height: 100vh;
+    background-image: url("../img/hero.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+    
+}
+
+#AboutMeDiv {
+    height: 100vh;
+}
+
+/* Textes de AboutME */
+#AboutMeTxt {
+    color:gray;
+}
+
+#AboutMeTxt h2 {
+    color:black;
+}
+
+#AboutMeTxt span{
+    font-weight: bold;
+}
+
+
+#AboutMeSkill{
+    color:blue;
+}
+#Divskill1_sub {
+
+}
+.DivBackground_back {
+    background-color: silver;
+}
+.DivBackground_front {
+    background-color: black;
+}
+
+#Divskill1 {
+    width: 100vw;
+}
