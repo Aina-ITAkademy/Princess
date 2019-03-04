@@ -1,5 +1,22 @@
 
+body {
+    padding:0px;
+    margin:0px;
+    /* font-family: Helvetica, Arial, Sans-Serif; */
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 
+}
+
+h1 {
+    color:black;
+    /* font-family: 'Poppins', sans-serif;
+    font-weight: bold; */
+}
+
+h2 {
+    
+}
 /*//////////////////
 // HEADER + INTRO // 
 //////////////////*/
@@ -12,7 +29,9 @@ header {
     position: fixed;
     width:100vw;
     color: white; /* Faire passer plus tard en gris avec JS*/
+    margin:0px;
 }
+
 #BurgerMenu {
     cursor: pointer;
     margin-right: 15px;
@@ -28,19 +47,18 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
     margin-left: 10px;
 }
 
 /* Image et text intro  */
 #SectionIntro {
-    background-color: gray;
-    background-blend-mode: luminosity;
-    
-    background-image: url("../img/bg.jpg");
+    background-color: black;
+    /* background-blend-mode: luminosity; */
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/bg.jpg');
+    /* background-image: url("../img/bg.jpg"); */
     background-repeat: no-repeat;
-    /* background-position: center;  */
-    /* background: linear-gradient(#e66465, #9198e5); */
     background-size: cover;
     color:white;
     width:100vw;
@@ -50,8 +68,12 @@ header {
     justify-content: center;
     align-items: center;
     text-align:center;
+    margin:0px;
 }
 
+#SectionIntro h1 {
+    color:white;
+}
 #TextIntro {
     display: flex;
     flex-direction: column;
@@ -64,13 +86,18 @@ header {
 // AboutMe  // 
 ////////////*/
 
+#SectionAboutMe {
+    background-color: Snow ;
+}
 #AboutMeImg{
     height: 100vh;
     background-image: url("../img/hero.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
-    
+    width:auto; 
+    max-width:100% ;
+    margin:0px;
 }
 
 #AboutMeDiv {
@@ -80,10 +107,13 @@ header {
 /* Textes de AboutME */
 #AboutMeTxt {
     color:gray;
+    width: 90vw;
+    padding: 10px;
 }
 
-#AboutMeTxt h2 {
+#AboutMeTxt h1 {
     color:black;
+    
 }
 
 #AboutMeTxt span{
@@ -91,19 +121,154 @@ header {
 }
 
 
+/* Les skillBars */
 #AboutMeSkill{
-    color:blue;
-}
-#Divskill1_sub {
-
+    color:white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin:0px;
+    
 }
 .DivBackground_back {
     background-color: silver;
+    border-radius: 5px;
+    width:95%;
+    margin:5px;
+   
 }
 .DivBackground_front {
     background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+}
+.DivBackground_front span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.w95 {
+    width: 95%;
 }
 
-#Divskill1 {
-    width: 100vw;
+.w90 {
+    width: 90%;
+}
+.w80 {
+    width: 80%;
+}
+
+/* Les "Boutons" de section skill*/
+#AboutMeButtons {
+    display: flex;
+    padding: 10px;
+}
+
+.AboutMeButtons_div {
+    margin:10px;
+    width: 150px;
+
+    border-radius: 5px;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ButtonCV {
+    background-color: black ;
+    color:white;
+    border-style: solid;
+    border-color: black;
+}
+
+#ButtonCV:hover {
+    background-color: white ;
+    border-color: black;
+    color:black;
+}
+
+#ButtonContact {
+    background-color: white ;
+    color:black;
+    border-style: solid;
+}
+
+#ButtonContact:hover {
+    background-color: black ;
+    border-color: black;
+    color:white;
+}
+/*////////////
+// Services //
+////////////*/
+
+#SectionService{
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+#SectionService_Title{
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+}
+
+#SectionService_Title h1 {
+    color: Black;
+}
+
+.ServiceDiv {
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 0px gray;
+}
+
+.ServiceDiv_Txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.ServiceDiv_Txt spans {
+    text-align: center;
+}
+.Icon_Size {
+    font-size: 2em;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.Icon_BG1 {
+    background-color: lightgray;
+}
+
+.Icon_BG2 {
+    background-color:lightgray;
+    filter: invert(100%);
+}
+
+/*/////////////
+// Portfolio //
+/////////////*/
+
+#PortefolioTitle {
+    display: flex;
+    justify-content: center;
+    height: 35vh;
 }
