@@ -10,8 +10,6 @@ h1 {
     color:black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    /* font-family: 'Poppins', sans-serif;
-    font-weight: bold; */
 }
 
 h3 {
@@ -36,6 +34,7 @@ header {
 
 #BurgerMenu {
     cursor: pointer;
+    
     margin-right: 15px;
 }
 #BurgerMenu div {
@@ -54,7 +53,29 @@ header {
     font-size: large;
     margin-left: 10px;
 }
+#HeaderNavMenu {
 
+}
+#HeaderNavMenu ul {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    padding: 0px;
+}
+
+#HeaderNavMenu ul li {
+    list-style: none;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+#HeaderNavMenu {
+    display: none;
+}
 /* Image et text intro  */
 #SectionIntro {
     background-color: black;
@@ -90,28 +111,38 @@ header {
 // AboutMe  // 
 ////////////*/
 
+
+
+
 #SectionAboutMe {
     background-color: Snow ;
+    display: flex;
+    flex-direction: column;
+    width:100vw;
 }
+
+
 #AboutMeImg{
     height: 100vh;
+    
     background-image: url("../img/hero.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
-    width:auto; 
-    max-width:100% ;
+    /* width:auto;  */
+    /* max-width:100% ; */
     margin:0px;
 }
 
 #AboutMeDiv {
     height: 100vh;
+    
 }
 
 /* Textes de AboutME */
 #AboutMeTxt {
     color:gray;
-    width: 90vw;
+    /* width: 90vw; */
     padding: 10px;
 }
 
@@ -136,7 +167,8 @@ header {
     color:white;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     margin:0px;
     
 }
@@ -152,6 +184,7 @@ header {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
     font-weight: bold;
 
 }
@@ -162,13 +195,41 @@ header {
 }
 .w95 {
     width: 95%;
+    animation-name: Anim_width95;
+    animation-duration: 4s;
 }
 
 .w90 {
     width: 90%;
+    animation-name: Anim_width90;
+    animation-duration: 4s;
 }
 .w80 {
     width: 80%;
+    animation-name: Anim_width80;
+    animation-duration: 4s;
+}
+
+.animation-pause {
+    animation-play-state: paused;
+}
+
+.animation-start {
+    animation-play-state: running;
+}
+@keyframes Anim_width95 {
+    from {width: 30%;}
+    to {width: 95%;}
+}
+
+@keyframes Anim_width80 {
+    from {width: 10%;}
+    to {width: 80%;}
+}
+
+@keyframes Anim_width90 {
+    from {width: 10%;}
+    to {width: 90%;}
 }
 
 /* Les "Boutons" de section skill*/
@@ -179,7 +240,7 @@ header {
 
 .AboutMeButtons_div {
     margin:10px;
-    width: 100vw;
+    /* width: 100vw; */
 
     border-radius: 5px;
     height: 2.5em;
@@ -212,6 +273,10 @@ header {
     border-color: rgb(41, 39, 39);
     color:white;
 }
+
+
+
+
 /*////////////
 // Services //
 ////////////*/
@@ -372,3 +437,55 @@ header {
     border-radius: 50%;
 }
 
+/*/////////////////
+///////////////////
+// media screen  // 
+///////////////////
+/////////////////*/
+
+
+
+@media screen and (min-width:1050px) {
+    /*////////////
+    // AboutMe  // 
+    ////////////*/
+    #SectionAboutMe {
+        
+        display: flex;
+        flex-direction: row;
+    } 
+
+    #AboutMeImg{
+        /* background-image: url("../img/__hero.jpg"); */
+        min-width: 30%;
+    }
+
+    #AboutMeDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    /*////////////
+    // Services //
+    ////////////*/
+
+    #SectionService_DivService{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ServiceDiv {
+        flex: 0 1 30vw;
+    }
+
+    #BurgerMenu {
+        display: none;
+    }
+    #HeaderNavMenu{
+        display: initial;
+    }
+}

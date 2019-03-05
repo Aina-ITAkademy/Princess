@@ -12,14 +12,25 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900|Poppins:200,300,400,500,600,700,800,900"
         rel="stylesheet">
-    <script src="main.js"></script>
+    <script src="js/princess.js"></script>
 </head>
 
-<body>
+<body onload="init(); " onscroll="scrollCtrl()">
 
     <!-- INTRO + HEADER -->
     <header>
         <div id='TitlePrincess'>PRINCESS</div>
+        <div id='HeaderNavMenu'>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Works</li>
+                    <li>Clients</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
         <div id='BurgerMenu'>
             <div></div>
             <div></div>
@@ -64,17 +75,17 @@
             <div id='AboutMeSkill'>
 
                 <div id="Divskill1" class="DivBackground_back">
-                    <div id="Divskill1_sub" class="DivBackground_front w95">
+                    <div id="Divskill1_sub" class="DivBackground_front w95 animation-pause ">
                         <span>Web Design</span> <span>95%</span>
                     </div>
                 </div>
                 <div id="Divskill2" class="DivBackground_back">
-                    <div id="Divskill2_sub" class="DivBackground_front w80">
+                    <div id="Divskill2_sub" class="DivBackground_front w80 animation-pause ">
                         <span>Branding</span> <span>80%</span>
                     </div>
                 </div>
                 <div id="Divskill3" class="DivBackground_back">
-                    <div id="Divskill3_sub" class="DivBackground_front w90">
+                    <div id="Divskill3_sub" class="DivBackground_front w90 animation-pause ">
                         <span>Developpement</span> <span>90%</span>
                     </div>
                 </div>
@@ -87,7 +98,6 @@
             </div>
         </div>
     </section>
-    </section>
 
 
     <!-- SERVICE -->
@@ -95,61 +105,62 @@
         <div id="SectionService_Title">
             <h1>Services.</h1>
         </div>
-        <div id='ServiceDiv1' class="ServiceDiv">
-            <div id='ServiceDiv1_Icon' class='Icon_Size Icon_BG1'>
-                <i class="fas fa-laptop"></i>
+        <div id='SectionService_DivService'>
+            <div id='ServiceDiv1' class="ServiceDiv">
+                <div id='ServiceDiv1_Icon' class='Icon_Size Icon_BG1'>
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div id='ServiceDiv1_Txt' class='ServiceDiv_Txt'>
+                    <h3>Web Design</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
             </div>
-            <div id='ServiceDiv1_Txt' class='ServiceDiv_Txt'>
-                <h3>Web Design</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+            <div id='ServiceDiv2' class="ServiceDiv">
+                <div id='ServiceDiv2_Icon' class='Icon_Size Icon_BG2'>
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div id='ServiceDiv2_Txt' class='ServiceDiv_Txt'>
+                    <h3>Branding</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
+            </div>
+            <div id='ServiceDiv3' class="ServiceDiv">
+                <div id='ServiceDiv3_Icon' class='Icon_Size Icon_BG1'>
+                    <i class="fas fa-umbrella"></i>
+                </div>
+                <div id='ServiceDiv3_Txt' class='ServiceDiv_Txt'>
+                    <h3>Development</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
+            </div>
+            <div id='ServiceDiv4' class="ServiceDiv">
+                <div id='ServiceDiv4_Icon' class='Icon_Size Icon_BG1'>
+                    <i class="far fa-gem"></i>
+                </div>
+                <div id='ServiceDiv4_Txt' class='ServiceDiv_Txt'>
+                    <h3>Creative Design</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
+            </div>
+            <div id='ServiceDiv5' class="ServiceDiv">
+                <div id='ServiceDiv5_Icon' class='Icon_Size Icon_BG1'>
+                    <i class="fas fa-tv"></i>
+                </div>
+                <div id='ServiceDiv5_Txt' class='ServiceDiv_Txt'>
+                    <h3>Fully Responsive</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
+            </div>
+            <div id='ServiceDiv6' class="ServiceDiv">
+                <div id='ServiceDiv6_Icon' class='Icon_Size Icon_BG1'>
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div id='ServiceDiv6_Txt' class='ServiceDiv_Txt'>
+                    <h3>Retina Ready</h3>
+                    <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
+                </div>
             </div>
         </div>
-        <div id='ServiceDiv2' class="ServiceDiv">
-            <div id='ServiceDiv2_Icon' class='Icon_Size Icon_BG2'>
-                <i class="fas fa-bullhorn"></i>
-            </div>
-            <div id='ServiceDiv2_Txt' class='ServiceDiv_Txt'>
-                <h3>Branding</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
-            </div>
-        </div>
-        <div id='ServiceDiv3' class="ServiceDiv">
-            <div id='ServiceDiv3_Icon' class='Icon_Size Icon_BG1'>
-                <i class="fas fa-umbrella"></i>
-            </div>
-            <div id='ServiceDiv3_Txt' class='ServiceDiv_Txt'>
-                <h3>Development</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
-            </div>
-        </div>
-        <div id='ServiceDiv4' class="ServiceDiv">
-            <div id='ServiceDiv4_Icon' class='Icon_Size Icon_BG1'>
-                <i class="far fa-gem"></i>
-            </div>
-            <div id='ServiceDiv4_Txt' class='ServiceDiv_Txt'>
-                <h3>Creative Design</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
-            </div>
-        </div>
-        <div id='ServiceDiv5' class="ServiceDiv">
-            <div id='ServiceDiv5_Icon' class='Icon_Size Icon_BG1'>
-                <i class="fas fa-tv"></i>
-            </div>
-            <div id='ServiceDiv5_Txt' class='ServiceDiv_Txt'>
-                <h3>Fully Responsive</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
-            </div>
-        </div>
-        <div id='ServiceDiv6' class="ServiceDiv">
-            <div id='ServiceDiv6_Icon' class='Icon_Size Icon_BG1'>
-                <i class="fas fa-camera"></i>
-            </div>
-            <div id='ServiceDiv6_Txt' class='ServiceDiv_Txt'>
-                <h3>Retina Ready</h3>
-                <spans>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis at tellus at dapibus.</spans>
-            </div>
-        </div>
-
     </section>
 
     <!-- Portefolio -->
@@ -167,18 +178,18 @@
         </div>
         <div id='PortefolioDiv1' class="PortefolioDiv">
             <!-- <div id='container1'> -->
-                <div class="Div_Opaque">
-                    <span>Web Design</span>
-                    <div id="OpaqueIcon" class="Protfolio_Icon_Size Icon_BG1">
-                        <i class="fas fa-unlink "></i>
-                    </div>
-                    <div id="OpaqueIcon" class="Protfolio_Icon_Size Icon_BG1">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+            <div class="Div_Opaque">
+                <span>Web Design</span>
+                <div id="OpaqueIcon" class="Protfolio_Icon_Size Icon_BG1">
+                    <i class="fas fa-unlink "></i>
                 </div>
-                    <img src="img/blog/1.jpg" class="PortefolioImg_Size" />
+                <div id="OpaqueIcon" class="Protfolio_Icon_Size Icon_BG1">
+                    <i class="fas fa-search-plus"></i>
                 </div>
-            <!-- </div> -->
+            </div>
+            <img src="img/blog/1.jpg" class="PortefolioImg_Size" />
+        </div>
+        <!-- </div> -->
         </div>
 
         <div id='PortefolioDiv2'></div>
