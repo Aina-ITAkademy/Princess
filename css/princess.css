@@ -2,20 +2,22 @@
 body {
     padding:0px;
     margin:0px;
-    /* font-family: Helvetica, Arial, Sans-Serif; */
-    font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
-
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
     color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     /* font-family: 'Poppins', sans-serif;
     font-weight: bold; */
 }
 
-h2 {
-    
+h3 {
+    color:rgb(41, 39, 39);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 /*//////////////////
 // HEADER + INTRO // 
@@ -47,17 +49,16 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+    font-size: large;
     margin-left: 10px;
 }
 
 /* Image et text intro  */
 #SectionIntro {
     background-color: black;
-    /* background-blend-mode: luminosity; */
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/bg.jpg');
-    /* background-image: url("../img/bg.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
@@ -73,12 +74,15 @@ header {
 
 #SectionIntro h1 {
     color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    
 }
 #TextIntro {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -113,11 +117,17 @@ header {
 
 #AboutMeTxt h1 {
     color:black;
-    
+}
+
+#AboutMeTxt h3 {
+    color:gray;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #AboutMeTxt span{
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -138,7 +148,7 @@ header {
    
 }
 .DivBackground_front {
-    background-color: black;
+    background-color: rgb(41, 39, 39);
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -148,6 +158,7 @@ header {
 .DivBackground_front span {
     margin-right: 5px;
     margin-left: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 .w95 {
     width: 95%;
@@ -168,7 +179,7 @@ header {
 
 .AboutMeButtons_div {
     margin:10px;
-    width: 150px;
+    width: 100vw;
 
     border-radius: 5px;
     height: 2.5em;
@@ -178,27 +189,27 @@ header {
 }
 
 #ButtonCV {
-    background-color: black ;
+    background-color: rgb(41, 39, 39);
     color:white;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(41, 39, 39);
 }
 
 #ButtonCV:hover {
     background-color: white ;
-    border-color: black;
-    color:black;
+    border-color: rgb(41, 39, 39);
+    color:rgb(41, 39, 39);
 }
 
 #ButtonContact {
     background-color: white ;
-    color:black;
+    color:rgb(41, 39, 39);
     border-style: solid;
 }
 
 #ButtonContact:hover {
-    background-color: black ;
-    border-color: black;
+    background-color: rgb(41, 39, 39);
+    border-color: rgb(41, 39, 39);
     color:white;
 }
 /*////////////
@@ -225,6 +236,7 @@ header {
 
 .ServiceDiv {
     background-color: white;
+    padding:5px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -244,6 +256,7 @@ header {
 .ServiceDiv_Txt spans {
     text-align: center;
 }
+
 .Icon_Size {
     font-size: 2em;
     height: 2.5em;
@@ -256,19 +269,106 @@ header {
 
 .Icon_BG1 {
     background-color: lightgray;
+    filter: invert(0%);
+    transition: color,0.5s;
 }
-
+.Icon_BG1:hover {
+    filter: invert(100%);
+}
 .Icon_BG2 {
     background-color:lightgray;
     filter: invert(100%);
+    transition: color,0.5s;
+}
+.Icon_BG2:hover {
+    filter: invert(0%);
 }
 
 /*/////////////
 // Portfolio //
 /////////////*/
 
+.SectionPortefolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
 #PortefolioTitle {
     display: flex;
     justify-content: center;
-    height: 35vh;
+    align-items: center;
+    height: 25vh;
 }
+
+#PortefolioNavMenu{
+    height: 20vh;
+    width: 100vw;
+    margin:0px;
+    padding:0px 0px 10px 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#PortefolioNavMenu ul {
+    display:flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin:0px;
+    padding: 0px;
+}
+
+#PortefolioNavMenu ul li {
+    list-style: none;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: rgb(41, 39, 39);
+}
+
+
+.PortefolioDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: red;
+    
+}
+
+/* #container1 {
+    position: relative;
+    background-color: blue;
+} */
+.Div_Opaque {
+    display: flex;
+    margin:0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}  
+
+.PortefolioImg {
+    background-color: yellow;
+}
+
+.PortefolioImg_Size {
+    max-height: 50%;
+    max-width: 100%;
+}
+
+.Protfolio_Icon_Size {
+    font-size: 1.5em;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
