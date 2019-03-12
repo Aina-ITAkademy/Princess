@@ -1,10 +1,10 @@
 
 body {
-    padding:0px;
-    margin:0px;
+    
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
+
 
 h1 {
     color:black;
@@ -58,6 +58,9 @@ h3 {
     display:none;
 }
 
+footer {
+    background-color: grey;
+}
 /*//////////////////
 // HEADER + INTRO // 
 //////////////////*/
@@ -196,11 +199,21 @@ a:active {
 }
 
 
+#ReseauxDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+    font-size: 1.5em;
+}
 
+#ReseauxDiv i{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /*////////////
 // AboutMe  // 
 ////////////*/
-
 
 
 
@@ -214,8 +227,7 @@ a:active {
 
 
 #AboutMeImg{
-    height: 100vh;
-    
+    /* height: 100vh; */
     background-image: url("../img/hero.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -226,7 +238,7 @@ a:active {
 }
 
 #AboutMeDiv {
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 
@@ -326,7 +338,9 @@ a:active {
 /* Les "Boutons" de section skill*/
 #AboutMeButtons {
     display: flex;
-    padding: 10px;
+    padding: 5px;
+    flex-wrap: nowrap;
+    height: auto;
 }
 
 .AboutMeButtons_div {
@@ -334,7 +348,7 @@ a:active {
     /* width: 100vw; */
 
     border-radius: 5px;
-    height: 2.5em;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,18 +440,20 @@ a:active {
 
 .Icon_BG1 {
     background-color: lightgray;
-    filter: invert(0%);
+    /* filter: invert(0%); */
     transition: color,0.5s;
 }
 .Icon_BG1:hover {
-    filter: invert(100%);
+    background-color: rgb(59, 59, 59);
+    /* filter: invert(100%); */
 }
 .Icon_BG2 {
     background-color:lightgray;
-    filter: invert(100%);
+    /* filter: invert(100%); */
     transition: color,0.5s;
 }
 .Icon_BG2:hover {
+    background-color: rgb(59, 59, 59);
     filter: invert(0%);
 }
 
@@ -530,6 +546,47 @@ a:active {
     justify-content: center;
     border-radius: 50%;
 }
+
+
+/*///////////////
+// Testimonial //
+///////////////*/
+
+
+#SectionTestimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-height: 100vh;
+
+}
+
+/*///////////
+// OurBlog //
+///////////*/
+
+#SectionOurBlog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+/*///////////
+// Contact //
+///////////*/
+
+#SectionContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-height: 101vh;
+}
+
+
 
 /*/////////////////
 ///////////////////

@@ -11,7 +11,10 @@ function alertTest(msg) {
 
 function scrollCtrl() {
     //Animation dans la section SectionAboutMe sur les skillbar
-    var posY = window.scrollY;
+    var headerList = document.getElementsByTagName('header')
+    var header = headerList[0]
+    
+    var posY = window.scrollY + (header.offsetHeight)*2;
     var limit = (window.innerHeight)*1.5;
     if(posY > limit) {
         var skill1 = document.getElementById("Divskill1_sub")
@@ -44,40 +47,27 @@ function scrollCtrl() {
     var aOurBlog = document.getElementById("aOurBlog")
     var aContact = document.getElementById("aContact")
 
-    if (posY > limit_Intro) {
-        if (posY > limit_AboutMe) {
-            if (posY > limit_Service) {
-                if (posY > limit_Portefolio) {
-                    if (posY > limit_Testimonial) {
-                        if (posY > limit_OurBlog) {
-                            if (posY > limit_ContactForm) {
-                                decorationAllNone()
-                                decorationAddUnderline(aContact)
-                            }
-                        } else {
-                            decorationAllNone()
-                            decorationAddUnderline(aOurBlog)
+    decorationAllNone()
+    decorationAddUnderline(aIntro)
+    if (posY >= limit_AboutMe) {
+        decorationAddUnderline(aAboutMe)
+        if (posY >= limit_Service) {
+            decorationAddUnderline(aService)
+            if (posY >= limit_Portefolio) {
+                decorationAddUnderline(aPortefolio)
+                if (posY >= limit_Testimonial) {
+                    decorationAddUnderline(aTestimonial)
+                    if (posY >= limit_OurBlog) {
+                        decorationAddUnderline(aOurBlog)
+                        if (posY >= limit_ContactForm) {
+                            decorationAddUnderline(aContact)
                         }
-                    } else {
-                        decorationAllNone()
-                        decorationAddUnderline(aTestimonial)
                     }
-                } else {
-                    decorationAllNone()
-                    decorationAddUnderline(aPortefolio)
                 }
-            } else {
-                decorationAllNone()
-                decorationAddUnderline(aService)
             }
-        } else {
-            decorationAllNone()
-            decorationAddUnderline(aAboutMe)
         }
-    } else {
-        decorationAllNone()
-        decorationAddUnderline(aIntro)
     }
+
 }
 
 function decorationAllNone() {
@@ -101,6 +91,7 @@ function decorationAllNone() {
 }
 
 function decorationAddUnderline(e) {
+    decorationAllNone()
     e.style.textDecoration = 'underline'
 }
 
