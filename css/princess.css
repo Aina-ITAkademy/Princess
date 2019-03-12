@@ -138,8 +138,11 @@ header {
     font-weight: 600;
     /* color: white; */
 }
-a {
+
+#NavMenu a {
     color:inherit;
+    width: 100%;
+    text-align: center;
 }
  /* unvisited link */
 a:link {
@@ -156,6 +159,7 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: inherit;
+    background-color: grey;
     text-decoration: none;
 }
 
