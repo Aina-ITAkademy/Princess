@@ -71,12 +71,14 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 999;
     /* position: fixed; */
     /* position: absolute; */
     width:100vw;
     /* color: white; */
     margin:0px;
     color: white;
+   
 }
 
 .HeaderAbsolute {
