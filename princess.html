@@ -15,27 +15,28 @@
     <script src="js/princess.js"></script>
 </head>
 
-<body onload="init(); " onscroll="scrollCtrl()">
+<body  onscroll="scrollCtrl(),menuStick()" onclick="menuStick()">
 
     <!-- INTRO + HEADER -->
-    <header>
-        <div id='TitlePrincess'>PRINCESS</div>
-        <div id='HeaderNavMenu'>
+    <header id='headerID' class="PosAbsolute">
+        <div id='TitlePrincess' >
+            PRINCESS
+        </div>
+        <!-- <div id='DivMenu'> -->
+            <div id='BurgerMenu' class= "BurgerSize" onclick='burgerClick()'>
+                <i class="fas fa-bars "></i>
+            </div>
+            <div id='NavMenu' class='DispNone'  >
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Works</li>
-                    <li>Clients</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <a href="#SectionIntro" id='aIntro'><li>Home</li></a>
+                    <a href="#SectionAboutMe" id='aAboutMe'><li>About</li></a>
+                    <a href="#SectionService" id='aService'><li>Services</li></a>
+                    <a href="#SectionPortefolio" id='aPortefolio'><li>Works</li></a>
+                    <a href="#SectionTestimonial" id='aTestimonial'><li>Clients</li></a>
+                    <a href="#SectionOurBlog" id='aOurBlog'><li>Blog</li></a>
+                    <a href="#SectionContact" id='aContact'><li>Contact</li></a>
                 </ul>
             </div>
-        <div id='BurgerMenu'>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </header>
 
     <section id='SectionIntro'>
