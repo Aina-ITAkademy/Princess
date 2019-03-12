@@ -15,7 +15,7 @@ function scrollCtrl() {
     var header = headerList[0]
     
     var posY = window.scrollY + (header.offsetHeight)*2;
-    var limit = (window.innerHeight)*1.5;
+    var limit = (window.innerHeight)-posY;
     if(posY > limit) {
         var skill1 = document.getElementById("Divskill1_sub")
         var skill2 = document.getElementById("Divskill2_sub")
